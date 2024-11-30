@@ -1,0 +1,70 @@
+{
+  "manifest_version": 3,
+  "name": "Tafotsi & Barthez Form Filler",
+  "version": "1.0.0",
+  "description": "Une extension pour remplir automatiquement les formulaires complexes en ligne en un clic.",
+  "permissions": [
+    "*://*.ifc-*",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "options_ui": {
+    "page": "popup.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon48.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://yaounde.ifc-tests-examens.com/*",
+        "https://douala.ifc-tests-examens.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "scripts": [
+      "createWindow.js"
+    ],
+    "persistent": false,
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/icon48.png"
+      ],
+      "matches": [
+        "https://yaounde.ifc-tests-examens.com/*",
+        "https://douala.ifc-tests-examens.com/*"
+      ]
+    }
+  ],
+  "commands": {
+    "fill_form": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Remplir le formulaire automatiquement"
+    }
+  },
+  "icons": {
+    "16": "icons/icon48.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon48.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

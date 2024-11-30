@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/popup.css">
+    <title>SB form Filler</title>
+</head>
+<body>
+    <main>
+        <h1>Tafotsi & Barthez Form Filler</h1>
+        <form id="dataForm">
+            <div class="card">
+                <label for="">Email</label>
+                <input 
+                type="email" 
+                id="email" 
+                name="email"
+                required
+                maxlength="50"
+                minlength="3"
+                autofocus
+                >
+            </div>
+            <div class="card">
+                <label for="">Noms</label>
+                <input type="text" id="name" name="noms">
+            </div>
+
+            <div class="card">
+                <label for="">Prénoms</label>
+                <input type="text" id="lastname" name="lastname">
+            </div>
+
+            <div class="card">
+                <label for="">Mot de passe</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="card">
+                <label for="">Téléphone</label>
+                <input type="tel" id="tel" name="tel">
+            </div>
+
+            <div class="card">
+                <label for="">Types de document</label>
+                <select id="document-type" name="document-type">
+                    <option value="national-id">Carte Nationale d'Identité</option>
+                    <option value="passport">Passeport</option>
+                </select>            
+            </div>
+
+            <div class="card">
+                <label for="">Motif d'inscription</label>
+                <select id="document-type" name="document-type">
+                    <option value="academique">Academique</option>
+                    <option value="immigration">Immigration au Canada</option>
+                </select>            
+            </div>
+
+            <div class="card">
+                <label for="">Numéro de CNI ou passeport</label>
+                <input type="text" id="passport" name="passport">
+            </div>
+
+            <div class="card">
+                <label for="">Photo Candidat</label>
+                <input type="file" id="photoCandidat" name="photoCandida" accept="image/png,image/jpeg">
+            </div>
+
+            <div class="card">
+                <label for="">Face Avant</label>
+                <input type="file" id="photoAvant" name="photoAvant" accept="image/png,image/jpeg">
+            </div>
+
+            <div class="card">
+                <label for="">Pays de naissance</label>
+                <select id="document-type" name="document-type">
+                    <option value="cameroun">Cameroun</option>
+                </select>            
+            </div>
+
+            <div class="card">
+                <label for="">Face Arrière</label>
+                <input type="file" id="photoArriere" name="photoArriere" accept="image/png,image/jpeg">
+            </div>
+
+            <div class="card">
+                <label for="">Date de naissance</label>
+                <input type="date" id="photoCandida" name="photoCandida">
+            </div>
+
+            <button class="save">Sauvegarder</button>
+            <button class="fill">Remplir</button>
+        </form>
+    </main>
+</body>
+<script src="popup.js"></script>
+</html>
