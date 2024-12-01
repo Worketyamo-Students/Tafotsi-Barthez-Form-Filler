@@ -4,94 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/popup.css">
-    <title>SB form Filler</title>
+    <title>SB Form Filler</title>
 </head>
 <body>
     <main>
         <h1>Tafotsi & Barthez Form Filler</h1>
         <form id="dataForm">
+            <!-- Champ Email -->
             <div class="card">
-                <label for="">Email</label>
-                <input 
-                type="email" 
-                id="email" 
-                name="email"
-                required
-                maxlength="50"
-                minlength="3"
-                autofocus
-                >
-            </div>
-            <div class="card">
-                <label for="">Noms</label>
-                <input type="text" id="name" name="noms">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required maxlength="50" minlength="3" autofocus>
             </div>
 
+            <!-- Champ Noms -->
             <div class="card">
-                <label for="">Prénoms</label>
+                <label for="name">Noms</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <!-- Champ Prénoms -->
+            <div class="card">
+                <label for="lastname">Prénoms</label>
                 <input type="text" id="lastname" name="lastname">
             </div>
 
+            <!-- Champ Mot de passe -->
             <div class="card">
-                <label for="">Mot de passe</label>
+                <label for="password">Mot de passe</label>
                 <input type="password" id="password" name="password">
             </div>
 
+            <!-- Champ Téléphone -->
             <div class="card">
-                <label for="">Téléphone</label>
+                <label for="tel">Téléphone</label>
                 <input type="tel" id="tel" name="tel">
             </div>
 
+            <!-- Champ Type de document -->
             <div class="card">
-                <label for="">Types de document</label>
+                <label for="document-type">Type de document</label>
                 <select id="document-type" name="document-type">
                     <option value="national-id">Carte Nationale d'Identité</option>
                     <option value="passport">Passeport</option>
-                </select>            
+                </select>
             </div>
 
+            <!-- Champ Motif d'inscription -->
             <div class="card">
-                <label for="">Motif d'inscription</label>
-                <select id="document-type" name="document-type">
+                <label for="registration-reason">Motif d'inscription</label>
+                <select id="registration-reason" name="registration-reason">
                     <option value="academique">Academique</option>
                     <option value="immigration">Immigration au Canada</option>
-                </select>            
+                </select>
             </div>
 
+            <!-- Champ Numéro de passeport -->
             <div class="card">
-                <label for="">Numéro de CNI ou passeport</label>
+                <label for="passport">Numéro de CNI ou passeport</label>
                 <input type="text" id="passport" name="passport">
             </div>
 
+            <!-- Champ Photo Candidat -->
             <div class="card">
-                <label for="">Photo Candidat</label>
-                <input type="file" id="photoCandidat" name="photoCandida" accept="image/png,image/jpeg">
+                <label for="photoCandidat">Photo Candidat</label>
+                <input type="file" id="photoCandidat" name="photoCandidat" accept="image/png,image/jpeg">
             </div>
 
+            <!-- Champ Face Avant -->
             <div class="card">
-                <label for="">Face Avant</label>
+                <label for="photoAvant">Face Avant</label>
                 <input type="file" id="photoAvant" name="photoAvant" accept="image/png,image/jpeg">
             </div>
 
+            <!-- Champ Pays de naissance -->
             <div class="card">
-                <label for="">Pays de naissance</label>
-                <select id="document-type" name="document-type">
+                <label for="birth-country">Pays de naissance</label>
+                <select id="birth-country" name="birth-country">
                     <option value="cameroun">Cameroun</option>
-                </select>            
+                </select>
             </div>
 
+            <!-- Champ Face Arrière -->
             <div class="card">
-                <label for="">Face Arrière</label>
+                <label for="photoArriere">Face Arrière</label>
                 <input type="file" id="photoArriere" name="photoArriere" accept="image/png,image/jpeg">
             </div>
 
+            <!-- Champ Date de naissance -->
             <div class="card">
-                <label for="">Date de naissance</label>
-                <input type="date" id="photoCandida" name="photoCandida">
+                <label for="date">Date de naissance</label>
+                <input type="date" id="date" name="date">
             </div>
 
-            <button class="save">Sauvegarder</button>
-            <button class="fill">Remplir</button>
+            <!-- Boutons d'action -->
+            <button type="submit" class="save">Sauvegarder</button>
+            <button type="button" class="fill" id="fill-form">Remplir</button>
         </form>
     </main>
 </body>

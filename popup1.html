@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/popup1.css">
+  <title>Extension Form Filler</title>
+</head>
+<body>
+  <main>
+    <h1>Tafotsi & Barthez Form Filler</h1>
+    
+    <!-- Instructions -->
+    <p>Choisissez une option</p>
+
+    <!-- Bouton pour ouvrir le formulaire dans un nouvel onglet pour entrer des informations -->
+    <button id="saveData" class="save">Enregistrer les informations</button>
+    
+    <!-- Bouton pour remplir automatiquement le formulaire sur la page cible -->
+    <button id="fillForm" class="fill">Remplir le formulaire</button>
+
+    <!-- Statut d'action -->
+    <div id="status"></div>
+  </main>
+  <!-- // Vérifier si les données sont présentes dans le local storage
+  chrome.storage.local.get("formData", (data) => {
+      if (data.formData) {
+          console.log("Données sauvegardées dans le local storage : ", data.formData);
+      } else {
+          console.log("Aucune donnée trouvée dans le local storage.");
+      }
+  }); -->
+  
+  <script src="popup1.js"></script>
+</body>
+</html>

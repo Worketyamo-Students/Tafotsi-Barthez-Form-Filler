@@ -1,0 +1,103 @@
+/* styles/popup1.css */
+:root {
+  --font-size: 10px;
+  --primary-color: #3F52E3;
+  --secondary-color: #F12D2D;
+  --bg-color: #F6F6F6;
+  --bg-color2: #EFE891;
+  --button-hover-color: #2d41b2;
+  --button-active-color: #1f3072;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+/* Corps de la page */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  width: 320px;
+  background-color: var(--bg-color);
+  box-shadow: 0px 6px 12px var(--shadow-color);
+  border-radius: var(--border-radius);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation pour faire apparaître la fenêtre popup */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > p {
+  text-align: center;
+  border-radius: 6rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(100%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Titre */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--primary-color);
+  animation: slideIn 1.2s ease-in-out;
+}
+
+/* Style des boutons */
+button {
+  width: 100%;
+  padding: 15px;
+  margin: 12px 0;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px var(--shadow-color);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: var(--button-active-color);
+  transform: scale(0.98);
+}
+
+/* Style du statut (message de succès) */
+#status {
+  margin-top: 20px;
+  text-align: center;
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
